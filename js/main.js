@@ -1,3 +1,70 @@
+/*
+    //ESCOPO DE VARIAVEIS
+
+    // VAR = escopo não respeita o escopo de bloco
+    var test = "example";
+
+    (() =>{
+        console.log(`Valor dentro da função "${test}"`);
+
+        if(true){
+            var test = "example";
+            console.log(`Valor dentro do if "${test}"`);
+        }
+
+        console.log(`Valor após a execução do if "${test}"`);
+    })();
+
+
+    // LET - Respeita o escopo de bloco
+    (() =>{
+        let test = 'valor função'
+        console.log(`Valor dentro da função "${test}"`);
+
+        if(true){
+            let test = "valor do if";
+            console.log(`Valor dentro do if "${test}"`);
+        }
+
+        console.log(`Valor após a execução do if "${test}"`);
+    })();
+
+
+    // CONST - Respeita o escopo de bloco
+
+    const name = 'Julio';
+
+    // Não podemos alterar o valor
+    //name = 'Cesar';
+
+    const user = {
+        name: 'Julio'
+    }
+
+    // Mas se for um objeto, podemos trocar suas propriedades
+    user.name = 'Outro nome';
+
+    // Não podemos fazer o objeto "apontar" para outro lugar
+    // user = {
+    //     name: 'Cesar'
+    // }
+    const persons = ['Julio', 'Cesar', 'Almeida'];
+
+    // Podemos adicionar novos itens
+    persons.push('Nery');
+
+    // Podemos remover algum item
+    persons.shift();
+
+    // Podemos alterar diretamente
+    persons[1] = 'Lima';
+
+    console.log('\nArray após as alterações: ', persons);
+
+*/
+
+/***************************************************/
+
 function load(){
     console.log("Página carregada!");
 }
